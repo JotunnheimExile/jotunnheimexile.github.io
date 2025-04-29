@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     revealOnScroll(); // Trigger on load
 });
 
+
 document.addEventListener("DOMContentLoaded", function() {
     const slides = document.querySelectorAll('.slide');
     if (slides.length > 0) {
@@ -38,3 +39,8 @@ document.addEventListener("DOMContentLoaded", function() {
         setInterval(nextSlide, 4000); // slide every 4 seconds
     }
 });
+
+function flip(button) {
+    const container = button.closest('.piece-container');
+    container.classList.toggle('flipped');
+}
