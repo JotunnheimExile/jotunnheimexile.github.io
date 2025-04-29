@@ -15,6 +15,7 @@ body {
     transform: translateY(0px);
 }
 
+/* Simple slider animation*/
 .slider {
     position: relative;
     width: 100%;
