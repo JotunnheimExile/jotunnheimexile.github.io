@@ -1,22 +1,23 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const reveals = document.querySelectorAll(".reveal");
+// Reveal on scroll
+document.addEventListener("DOMContentLoaded", () => {
+    const reveals = document.querySelectorAll('.reveal');
 
-    const options = {
-        threshhold: 0.1
-    };
+    function revealOnScroll() {
+        const triggerBottom = window.innerHeight * 0.85;
 
-    const observer = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("active");
-                observer.unobserve(entry.target);
+        reveals.forEach(reveal => {
+            const boxTop = reveal.getBoundingClientRect().top;
+
+            if (boxTop < triggerBottom) {
+                reveal.classList.add('active');
+            } else {
+                reveal.classList.remove('active');
             }
         });
-    }, options);
+    }
 
-    reveals.forEach(reveal => {
-        observer.observe(reveal);
-    });
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Trigger on load
 });
 
 document.addEventListener("DOMContentLoaded", function() {
