@@ -12,15 +12,37 @@
     <section class="container py-5 text-center">
         <h2>Gallery</h2>
         <div class="slider mt-4" id="gallery">
+
             <div class="slide active">
-                <img src="images/image1.jpg" alt="Design 1" class="img-fluid rounded">
+                <div class="piece-container">
+                    <div class="image-flip">
+                        <img src="images/image1.jpg" class="front" alt="Design 1 Front">
+                        <img src="images/image1.jpg" class="back" alt="Design 1 Back">
+                    </div>
+                    <button class="flip-btn" onclick="flip(this)">&#x21bb;</button>
+                </div>
             </div>
+
             <div class="slide">
-                <img src="images/image2.jpg" alt="Design 2" class="img-fluid rounded">
+                <div class="piece-container">
+                    <div class="image-flip">
+                        <img src="images/image2.jpg" class="front" alt="Design 2 Front">
+                        <img src="images/image2.jpg" class="back" alt="Design 2 Back">
+                    </div>
+                    <button class="flip-btn" onclick="flip(this)">&#x21bb;</button>
+                </div>
             </div>
+
             <div class="slide">
-                <img src="images/image3.jpg" alt="Design 3" class="img-fluid rounded">
+                <div class="piece-container">
+                    <div class="image-flip">
+                        <img src="images/image3.jpg" class="front" alt="Design 3 Front">
+                        <img src="images/image3.jpg" class="back" alt="Design 3 Back">
+                    </div>
+                    <button class="flip-btn" onclick="flip(this)">&#x21bb;</button>
+                </div>
             </div>
+
         </div>
         <a href="index.html" class="btn btn-outline-light mt-4">Back Home</a>
     </section>
