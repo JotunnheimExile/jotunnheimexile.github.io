@@ -6,8 +6,9 @@ body {
 /* Basic reveal animation */
 .reveal {
     opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transform: translateY(100px);
+    transition: all 1s ease-out;
+    will-change: opacity, transform;
 }
 
 .reveal.active {
