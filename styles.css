@@ -39,10 +39,10 @@ body {
 /* Front-back image flip effect*/
 .piece-container {
     position: relative;
-    width: 300px;
-    height: 400px;
-    margin: 2rem auto;
-    perspective: 1000px;
+    width: 600px;
+    height: 1200px;
+    margin: 0 auto;
+    perspective: 1000px; /* enables 3D effect*/
 }
 
 .image-flip {
@@ -59,33 +59,33 @@ body {
 
 .image-flip img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    border-radius: 8px;
     position: absolute;
     backface-visibility: hidden;
-    object-fit: cover;
-    border-radius: 8px;
+    top: 0;
+    left: 0;
 }
 
 .image-flip .back {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) scaleX(-1);
 }
 
 .flip-btn {
     position: absolute;
     top: 10px;
     right: 10px;
-    z-index: 2;
-    background: rgba(255,255,255,0.1);
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    color: white;
+    font-size: 1.2rem;
+    padding: 6px 10px;
+    cursor: pointer;
     transition: background 0.3s;
 }
 
 .flip-btn:hover {
-    background: rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.3);
 }
