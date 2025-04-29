@@ -3,6 +3,7 @@ body {
     color: #fff;
 }
 
+
 /* Basic reveal animation */
 .reveal {
     opacity: 0;
@@ -15,6 +16,7 @@ body {
     opacity: 1;
     transform: translateY(0px);
 }
+
 
 /* Simple slider animation*/
 .slider {
@@ -31,4 +33,59 @@ body {
 
 .slide.active {
     display: block;
+}
+
+
+/* Front-back image flip effect*/
+.piece-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 2rem auto;
+    perspective: 1000px;
+}
+
+.image-flip {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.piece-container.flipped .image-flip {
+    transform: rotateY(180deg);
+}
+
+.image-flip img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.image-flip .back {
+    transform: rotateY(180deg);
+}
+
+.flip-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: background 0.3s;
+}
+
+.flip-btn:hover {
+    background: rgba(255,255,255,0.3);
 }
