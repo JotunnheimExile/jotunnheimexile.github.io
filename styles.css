@@ -89,3 +89,9 @@ body {
 .flip-btn:hover {
     background: rgba(255, 255, 255, 0.3);
 }
+
+.letter-spaced {
+    letter-spacing: 0.35em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
