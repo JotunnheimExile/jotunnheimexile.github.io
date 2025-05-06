@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant-Garamond:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@500;700&display=swap');
 
+h1 {
+    font-family: 'Cormorant-Garamond', serif;
+}
+
 body {
-    font-family: 'Cormorant-Garamond', sans-serif;
+    font-family: 'Jost', sans-serif;
 }
 
 body {
